@@ -8,6 +8,10 @@ file(
 set(dependencies
         freertos
         esp_system
+        esp_netif
+        esp_event
+        esp_wifi
+        nvs_flash
 )
 
 idf_component_register(

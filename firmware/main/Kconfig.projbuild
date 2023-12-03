@@ -1,0 +1,27 @@
+menu "ESP-Now Portable Sender"
+    config PORTABLE_SENDER_MESSAGE
+        string "Message to send"
+        default "Hello World"
+        help
+          Message to send to the receiver.
+
+   config PORTABLE_SENDER_RECEIVER_MAC
+        string "Receiver MAC Address"
+        default "FF:FF:FF:FF:FF:FF"
+        help
+          MAC address of the receiver.
+
+    config PORTABLE_SENDER_CHANNEL
+        int "Wi-Fi Channel"
+        range 1 14
+        default 1
+        help
+          Channel to use for sending.
+
+    config PORTABLE_SENDER_WAKEUP_PIN
+        int "Wakeup Pin"
+        default 0
+        help
+          Pin to use for waking up the device.
+
+endmenu
